@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+   <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+  <title>meditation js</title>
+</head>
+<body>
+  <div class="wrapper">
+    <img 
+    id="mainBg"
+    class="bg"
+    src="https://raw.githubusercontent.com/edumigueis/meditation-app/master/images/bg.jpg"
+    alt=""
+    />
+    <video id="stage-video" src="" muted autoplay loop></video>
+    <div class="top-portion-wrapper">
+      <div class="inner-main">
+      <div class="animation">
+        <div class="watch-face">
+         <div class="cricle"></div>
+         <div class="cricle"></div>
+         <div class="cricle"></div>
+         <div class="cricle"></div>
+         <div class="cricle"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <button class="audio-btn muted" id="switch-audio">
+        <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-volume-up"></i>
+      </button>
+      <button class="audio-btn" id="random-audio">
+      <i class="fas fa-random"></i>
+      </button>
+      <button id="toggle-video">
+      <i class="fas fa-video"></i>
+      <i class="fas fa-video-slash none"></i>
+      </button>
+      <div class="dp-trigger">
+         <div class="dropdown">
+          <ul>
+           <li>
+           <button>
+            <a
+             href="https://github.com/gonzalote99"
+             target="_blank"
+             rel="noopener noreferrer"
+            ><i class="fab fa-github"></i>
+
+            </a>
+           </button>
+           </li>
+           <li>
+            <button id="config-btn"><i class="fas fa-cog"></i>
+            </button>  
+           </li>
+
+
+          </ul>
+         </div>
+         <button>
+          <i class="fas fa-ellipsis-h"></i>
+         </button>
+      </div>
+    </div>
+    <div class="poses" id="poses">
+       <div class="current pose">
+        <img src="https://raw.githubusercontent.com/edumigueis/meditation-app/master/images/yoga1.png" alt=""/>
+       </div>
+       <div class="pose">
+         <img src="https://raw.githubusercontent.com/edumigueis/meditation-app/master/images/yoga2.png" alt="" />
+       </div>
+       <div class="pose">
+          <img src="https://raw.githubusercontent.com/edumigueis/meditation-app/master/images/yoga3.png" alt="" />
+       </div>
+       <div class="pose">
+         <img src="https://raw.githubusercontent.com/edumigueis/meditation-app/master/images/yoga4.png" alt="" />
+       </div>
+       <div class="pose">
+       <img src="https://raw.githubusercontent.com/edumigueis/meditation-app/master/images/yoga5.png" alt="" />
+       </div>
+    </div>
+ 
+  </div>
+  <div class="modal-wrapper" id="config-md">
+   <div class="modal">
+    <div class="part">
+    <p class="title">theme</p>
+    <div class="swatches">
+      <div 
+        class="swatch active"
+        data-theme="0"
+        style="background-color: #70dfbd"
+
+      >
+      </div>
+      <div 
+        class="swatch"
+        data-theme="1"
+        style="background-color: #64aec4"
+      >
+    </div>
+    <div 
+       class="swatch"
+       data-theme="8"
+       style="background-color: #3d6bcf"
+    >
+    </div>
+    <div 
+    class="swatch"
+    data-theme="2"
+    style="background-color: #a2df70"
+    >
+    </div>
+    <div 
+    class="swatch"
+    data-theme="3"
+    style="background-color: #70addf"
+    >
+   </div>
+   <div 
+    class="swatch"
+    data-theme="4"
+    style="background-color: #bd31f5"
+    >
+   </div>
+   <div 
+    class="swatch"
+    data-theme="5"
+    style="background-color: #eb59f0"
+    >
+   </div>
+   <div 
+    class="swatch"
+    data-theme="6"
+    style="background-color: #e6b737"
+    >
+   </div>
+   <div 
+    class="swatch"
+    data-theme="7"
+    style="background-color: #e68637"
+    >
+   </div>
+    </div>
+  </div>
+  <div class="part-flex">
+   <p class="title">yoga poses</p>
+   <div class="toggle-wrapper">
+  <input type="checkbox" id="toggly">
+  <label for="toggly" ><i></i></label>
+  </div>
+  </div>
+  <div class="part">
+    <p class="title">background</p>
+    <div class="backgrounds">
+       <input 
+       type="file"
+       id="imgupload"
+       style="display: none"
+       accept="image/*"
+       onchange="openFile(event)"
+       />
+       <div class="back">
+       <img src="https://raw.githubusercontent.com/edumigueis/meditation-app/master/images/bg.jpg" alt=""  id="OpenImgUpload" />
+       </div>
+    </div>
+  </div>
+  <div class="part">
+    <p class="title">made for me</p> 
+  </div>
+   </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
